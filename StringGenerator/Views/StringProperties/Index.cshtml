@@ -1,0 +1,33 @@
+﻿@model IEnumerable<StringGenerator.Models.StringProperties>
+
+@{
+    ViewBag.Title = "Index";
+}
+<table class="table">
+    <tr>
+
+        <th>
+            Random Strings
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @foreach (var str in item.RandomString.Split(','))
+                {
+                    <div>@str.Trim()</div>
+                }
+            </td>
+
+        </tr>
+    }
+
+</table>
+<div class="mb-3">
+    <a href="@Url.Action("Edit", "StringProperties", new { id = Model.FirstOrDefault().ID })" class="btn btn-primary">Generate Again</a>
+    <a href="@Url.Action("Create", "StringProperties")" class="btn btn-secondary">Go to Input Form</a>
+</div>

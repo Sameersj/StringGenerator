@@ -1,0 +1,74 @@
+﻿@model StringGenerator.Models.StringProperties
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StringProperties</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StringCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StringCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StringLength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StringLength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsNumeric)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsNumeric)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsUpperCase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsUpperCase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsLowerCase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsLowerCase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsUniqueString)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsUniqueString)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RandomString)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RandomString)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

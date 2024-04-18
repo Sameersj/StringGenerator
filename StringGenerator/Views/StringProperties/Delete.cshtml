@@ -1,0 +1,80 @@
+﻿@model StringGenerator.Models.StringProperties
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>StringProperties</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StringCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StringCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StringLength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StringLength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsNumeric)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsNumeric)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsUpperCase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsUpperCase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsLowerCase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsLowerCase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsUniqueString)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsUniqueString)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RandomString)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RandomString)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
